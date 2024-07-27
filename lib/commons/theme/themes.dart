@@ -5,22 +5,24 @@ import '../constants/dimensions.dart';
 import 'app_colors.dart';
 
 //"Montserrat_Arabic"
-String appFontFamily = "Montserrat-Arabic";
 ThemeData lightTheme = ThemeData(
-  fontFamily: appFontFamily,
-  appBarTheme: const AppBarTheme(
-    backgroundColor: Color(0xffffffff),
-    titleTextStyle: TextStyle(
-      fontSize: Sizer.size20,
-      fontWeight: FontWeight.bold,
-    ),
-  ),
   textTheme: TextTheme(
-    headlineMedium: GoogleFonts.lato(
-      color: Colors.black,
-      fontSize: Sizer.size16
-    ),
+    headlineSmall:
+        GoogleFonts.urbanist(color: Colors.black, fontSize: Sizer.size12),
+    headlineMedium:
+        GoogleFonts.urbanist(color: Colors.black, fontSize: Sizer.size14),
+    headlineLarge:
+        GoogleFonts.urbanist(color: Colors.black, fontSize: Sizer.size16),
+    displaySmall:
+        GoogleFonts.urbanist(color: Colors.black, fontSize: Sizer.size18),
+    displayMedium:
+        GoogleFonts.urbanist(color: Colors.black, fontSize: Sizer.size20),
+    titleLarge:
+        GoogleFonts.urbanist(color: Colors.black, fontSize: Sizer.size24),
     titleMedium: GoogleFonts.lato(
+      color: AppColors.white,
+    ),
+    titleSmall: GoogleFonts.lato(
       color: AppColors.white,
     ),
   ),
@@ -37,4 +39,3 @@ ThemeData lightTheme = ThemeData(
     onSurface: AppColors.onSurfaceColor,
   ),
 );
-
