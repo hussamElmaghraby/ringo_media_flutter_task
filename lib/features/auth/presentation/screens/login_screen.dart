@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ringo_media/commons/constants/asset_names.dart';
 import 'package:ringo_media/commons/constants/dimensions.dart';
 import 'package:ringo_media/commons/constants/spacers.dart';
@@ -8,6 +9,7 @@ import 'package:ringo_media/commons/widgets/app_button.dart';
 import '../../../../commons/theme/app_colors.dart';
 import '../../../../commons/widgets/app_scaffold.dart';
 import '../../../../commons/widgets/app_text_field.dart';
+import '../../../home/presentation/screens/home_screen.dart';
 import '../widgets/socail_item_widget.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -97,7 +99,13 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             FixedSpacers.spacerH35,
             AppButton(
-              onPressed: checkValidity(),
+              enabled: _passwordController.text.isNotEmpty &&
+                  _usernameController.text.isNotEmpty,
+              onPressed: () {
+                Get.to(
+                  const HomeScreen(),
+                );
+              },
               buttonTitle: 'Login',
             ),
             FixedSpacers.spacerH35,
@@ -150,15 +158,19 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
-
-  VoidCallback? checkValidity() {
-    setState(() {});
-    if (_passwordController.text.isNotEmpty &&
-        _usernameController.text.isNotEmpty) {
-      setState(() {});
-      return () {};
-    } else {
-      return null;
-    }
-  }
+  //
+  // VoidCallback? checkValidity() {
+  //   setState(() {});
+  //   if (_passwordController.text.isNotEmpty &&
+  //       _usernameController.text.isNotEmpty) {
+  //     setState(() {});
+  //     return () {
+  //       Get.to(
+  //         HomeScreen(),
+  //       );
+  //     };
+  //   } else {
+  //     return null;
+  //   }
+  // }
 }

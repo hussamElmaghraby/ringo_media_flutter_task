@@ -7,11 +7,14 @@ import '../theme/app_colors.dart';
 class AppButton extends StatelessWidget {
   const AppButton({
     super.key,
-    required this.buttonTitle, required this.onPressed,
+    required this.buttonTitle,
+    required this.onPressed,
+    this.enabled = true,
   });
 
   final String buttonTitle;
   final VoidCallback? onPressed;
+  final bool enabled;
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +22,12 @@ class AppButton extends StatelessWidget {
       width: ResponsiveDimension.heightPercentage90,
       height: Sizer.size56,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ButtonStyle(
             backgroundColor: WidgetStateProperty.all(
-              onPressed != null  ? context.appColorScheme.primary  :  AppColors.appDimmedStateColor,
+              enabled
+                  ? context.appColorScheme.primary
+                  : AppColors.appDimmedStateColor,
             ),
             shape: WidgetStateProperty.all(
               const RoundedRectangleBorder(

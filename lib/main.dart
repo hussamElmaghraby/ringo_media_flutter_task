@@ -3,6 +3,6 @@ import 'package:ringo_media/app/app.dart';
 
 void main() {
   runApp(
-    App(),
+    const App(),
   );
 }

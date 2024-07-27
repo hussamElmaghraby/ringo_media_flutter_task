@@ -50,7 +50,7 @@ class _AppTextFieldState extends State<AppTextField> {
                 width: 2,
               ),
             ),
-            suffix: GestureDetector(
+            suffix: widget.isPassword ? GestureDetector(
               onTap: () {
                 setState(
                   () {
@@ -67,7 +67,7 @@ class _AppTextFieldState extends State<AppTextField> {
                       Icons.visibility_outlined,
                       color: Colors.grey,
                     ),
-            ),
+            ) : null,
             focusedBorder: const UnderlineInputBorder(
               borderSide: BorderSide(
                 color: Colors.black,

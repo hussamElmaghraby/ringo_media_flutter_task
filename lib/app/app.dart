@@ -12,7 +12,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       child: GetMaterialApp(
-        showSemanticsDebugger: false,
+        debugShowCheckedModeBanner : false,
         home: const LoginScreen(),
         theme: lightTheme,
       ),
