@@ -55,7 +55,7 @@ class FixedSpacers {
     width: 30,
   );
   static const spacerW40 = SizedBox(
-    width: 30,
+    width: 40,
   );  static const spacerW7 = SizedBox(
     width: 7,
   );

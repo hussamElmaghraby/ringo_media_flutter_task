@@ -1,41 +1,53 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../constants/dimensions.dart';
 import 'app_colors.dart';
 
 //"Montserrat_Arabic"
 ThemeData lightTheme = ThemeData(
-  textTheme: TextTheme(
-    headlineSmall:
-        GoogleFonts.urbanist(color: Colors.black, fontSize: Sizer.size12),
-    headlineMedium:
-        GoogleFonts.urbanist(color: Colors.black, fontSize: Sizer.size14),
-    headlineLarge:
-        GoogleFonts.urbanist(color: Colors.black, fontSize: Sizer.size16),
-    displaySmall:
-        GoogleFonts.urbanist(color: Colors.black, fontSize: Sizer.size18),
-    displayMedium:
-        GoogleFonts.urbanist(color: Colors.black, fontSize: Sizer.size20),
-    titleLarge:
-        GoogleFonts.urbanist(color: Colors.black, fontSize: Sizer.size24),
-    titleMedium: GoogleFonts.lato(
-      color: AppColors.white,
+  fontFamily: "Urbanist",
+  textTheme: const TextTheme(
+    headlineSmall: TextStyle(
+      color: Colors.black,
+      fontSize: Sizer.size12,
     ),
-    titleSmall: GoogleFonts.lato(
-      color: AppColors.white,
+    headlineMedium: TextStyle(
+      color: Colors.black,
+      fontSize: Sizer.size14,
+    ),
+    headlineLarge: TextStyle(
+      color: Colors.black,
+      fontSize: Sizer.size16,
+    ),
+    displaySmall: TextStyle(
+      color: Colors.black,
+      fontSize: Sizer.size18,
+    ),
+    displayMedium: TextStyle(
+      color: Colors.black,
+      fontSize: Sizer.size20,
+    ),
+    titleLarge: TextStyle(
+      color: Colors.black,
+      fontSize: Sizer.size24,
+    ),
+    titleMedium: TextStyle(
+      color: AppColors.appBlackColor,
+    ),
+    titleSmall: TextStyle(
+      color: AppColors.appBlackColor,
     ),
   ),
   disabledColor: const Color(0xff949088),
-  colorScheme: ColorScheme(
+  colorScheme: const ColorScheme(
     brightness: Brightness.light,
-    secondary: AppColors.secondaryColor,
-    primary: AppColors.primaryColor,
-    onPrimary: AppColors.appDisplayColor,
+    secondary: AppColors.appGreyColor,
+    primary: AppColors.appBlackColor,
+    onPrimary: AppColors.appBlackColor,
     onSecondary: Colors.black,
-    error: Colors.white,
-    onError: Colors.white,
+    error: Colors.red,
+    onError: Colors.redAccent,
     surface: Colors.white,
-    onSurface: AppColors.onSurfaceColor,
+    onSurface: AppColors.appGreyColor,
   ),
 );
