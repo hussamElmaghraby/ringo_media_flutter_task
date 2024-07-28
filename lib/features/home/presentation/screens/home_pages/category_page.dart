@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 
 class CategoryPage extends StatelessWidget {
   const CategoryPage({super.key});
