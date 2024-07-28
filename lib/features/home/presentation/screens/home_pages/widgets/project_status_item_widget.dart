@@ -21,7 +21,7 @@ class ProjectStatusItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: Sizer.size120,
+      // width: Sizer.size120,
       margin: const EdgeInsets.all(
         Sizer.size3,
       ),

@@ -152,6 +152,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
+            FixedSpacers.spacerH25,
           ],
         ),
       ),

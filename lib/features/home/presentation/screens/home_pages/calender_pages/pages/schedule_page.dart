@@ -13,43 +13,42 @@ class SchedulePage extends StatefulWidget {
 class _SchedulePageState extends State<SchedulePage> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        // shrinkWrap: true,
-        children: [
-          FixedSpacers.spacerH10,
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: Sizer.size15,
-            ),
-            child: DynamicTimelineTileBuilder(
-              itemCount: eventData.length,
-              itemBuilder: (_, idx) => DynamicTimelineTile(
-                // starerChild: [
-                //   Icon(Icons.add)
-                // ],
-                starerDates: [
-                  eventData[idx]["date"]!,
-                ],
-                events: [
-                  EventCard(
-                    cardColor: const Color(0xffEBF9F5) ,
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        border: Border(left: BorderSide(color: Color(0xffFD7722) ,width: 2))
-                      ),
-                      child: ListTile(
-                          title: Text(eventData[idx]["title"]!),
-                          subtitle: Text(eventData[idx]["description"]!)),
+    return Column(
+      // shrinkWrap: true,
+      children: [
+        FixedSpacers.spacerH10,
+        Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: Sizer.size15,
+          ),
+          child: DynamicTimelineTileBuilder(
+            itemCount: eventData.length,
+            itemBuilder: (_, idx) => DynamicTimelineTile(
+              // starerChild: [
+              //   Icon(Icons.add)
+              // ],
+              starerDates: [
+                eventData[idx]["date"]!,
+              ],
+              events: [
+                EventCard(
+                  cardColor: const Color(0xffEBF9F5) ,
+                  child: Container(
+                    height: ResponsiveDimension.heightPercentage10,
+                    decoration: const BoxDecoration(
+                      border: Border(left: BorderSide(color: Color(0xffFD7722) ,width: 2))
                     ),
-                  )
-                ],
-              ),
+                    child: ListTile(
+                        title: Text(eventData[idx]["title"]!),
+                        subtitle: Text(eventData[idx]["description"]!)),
+                  ),
+                )
+              ],
             ),
           ),
-          FixedSpacers.spacerH20,
-        ],
-      ),
+        ),
+        FixedSpacers.spacerH20,
+      ],
     );
   }
 }

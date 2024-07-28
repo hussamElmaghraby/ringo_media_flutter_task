@@ -63,9 +63,9 @@ class _CalenderScreenState extends State<CalenderScreen>
                   ],
                 ),
                 SizedBox(
-                  height: 500,
+                  height: 950,
                   child: TabBarView(
-                    physics: const NeverScrollableScrollPhysics(),
+                    // physics: const NeverScrollableScrollPhysics(),
                     controller: _tabController,
                     children:const [
                       SchedulePage(

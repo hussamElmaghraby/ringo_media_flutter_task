@@ -100,9 +100,11 @@ class _ProjectSummaryPageState extends State<ProjectSummaryPage> {
                   .toList(),
             ),
             FixedSpacers.spacerH25,
-            const SizedBox(
+             SizedBox(
               height: Sizer.size120,
-              child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                  children: [
                 ProjectStatusItemWidget(
                   startColor: Color(0xff3A9ADE),
                   endColor: Color(0xff5EACE4),
