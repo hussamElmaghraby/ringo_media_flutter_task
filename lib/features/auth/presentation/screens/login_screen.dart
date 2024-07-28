@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ringo_media/commons/constants/asset_names.dart';
-import 'package:ringo_media/commons/constants/dimensions.dart';
 import 'package:ringo_media/commons/constants/spacers.dart';
 import 'package:ringo_media/commons/extensions/context_extension.dart';
 import 'package:ringo_media/commons/widgets/app_button.dart';

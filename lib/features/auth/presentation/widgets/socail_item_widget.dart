@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ringo_media/commons/constants/dimensions.dart';
@@ -30,7 +29,7 @@ class SocailItemWidget extends StatelessWidget {
                 color: context.appColorScheme.secondary,
                 // spreadRadius: 1,
                 blurRadius: 2,
-                offset: Offset(0, 1), // changes position of shadow
+                offset: const Offset(0, 1), // changes position of shadow
               ),
             ]),
         width: ResponsiveDimension.heightPercentage90,
