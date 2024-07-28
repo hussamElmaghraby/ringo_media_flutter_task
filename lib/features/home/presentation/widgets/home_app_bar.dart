@@ -13,7 +13,7 @@ class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         bottom: Sizer.size30,
       ),
       decoration: BoxDecoration(
