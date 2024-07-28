@@ -12,4 +12,8 @@ class AssetNames {
     static const folderIcon = "assets/icons/folder.svg";
     static const profileIcon = "assets/icons/profile.png";
     static const calendarActiveIcon = "assets/icons/calendar_active.svg";
+    static const searchNormalIcon = "assets/icons/search_normal.svg";
+    static const verifyIcon = "assets/icons/verify.svg";
+    static const clockIcon = "assets/icons/clock.svg";
+    static const moreIcon = "assets/icons/more.svg";
 }

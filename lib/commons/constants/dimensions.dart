@@ -27,6 +27,7 @@ class Sizer {
   static const size56 = 56.0;
   static const size60 = 60.0;
   static const size65 = 65.0;
+  static const size68 = 68.0;
   static const size75 = 75.0;
   static const size80 = 80.0;
   static const size90 = 90.0;

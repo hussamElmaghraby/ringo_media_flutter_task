@@ -7,16 +7,18 @@ class AppScaffold extends StatelessWidget {
     super.key,
     required this.body,
     this.bottomNavigationBar,
-    this.withPadding = true
+    this.withPadding = true, this.floatingActionButton
   });
 
   final Widget body;
   final Widget? bottomNavigationBar;
   final bool withPadding;
+  final Widget? floatingActionButton;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation:FloatingActionButtonLocation.centerFloat ,
       body: Container(
         padding: withPadding ? const EdgeInsets.only(
           right: Sizer.size15,
@@ -26,6 +28,7 @@ class AppScaffold extends StatelessWidget {
         child: body,
       ),
       bottomNavigationBar: bottomNavigationBar,
+      floatingActionButton: floatingActionButton,
     );
   }
 }
